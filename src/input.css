@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .neon{
+    @apply rounded-full border border-primary-200 bg-gradient-to-b from-primary-200 to-primary-400 text-primary-900;
+    box-shadow: 0 1px 4px 1px theme(colors.primary.200 / 25%), inset 0px -1px 2px theme(colors.primary.200);
+  }
+  .input{
+    @apply rounded-md border-2 border-primary-800 bg-primary-800 p-2 text-white focus:outline-none ring-2 focus:bg-primary-700 focus:border-primary-900 placeholder:text-primary-900
+  }
+  .radial-gradient{
+    background-image: radial-gradient(50% 100% at 50% 0%, theme(colors.primary.700) 0%, theme(colors.primary.800) 100%);
+  }
+
+  .btn{
+    @apply rounded-full border border-primary-200 bg-gradient-to-b from-primary-200 to-primary-400 text-primary-900 px-5 py-2 transition hover:contrast-200;
+    box-shadow: 0 1px 4px 1px theme(colors.primary.200 / 25%), inset 0px -1px 2px theme(colors.primary.200);
+  }
+}
